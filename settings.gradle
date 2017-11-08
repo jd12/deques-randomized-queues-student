@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'percolation-student'
+rootProject.name = 'deque-randomized-queue-student'
