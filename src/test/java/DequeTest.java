@@ -10,7 +10,7 @@ import org.junit.Test;
 public class DequeTest {
 
 	private Deque<String> list;
-	
+
 	@Before
 	public void setup(){
 		list = new Deque<String>();
@@ -20,7 +20,7 @@ public class DequeTest {
 		if(list == l2)
 			fail("You should return a new instance of list with each call to Configuration.getDeque()");
 	}
-	
+
 	@Test (timeout = 500)
 	public void testaddFirstIsEmptySizeAndRemoveFirst() {
 		assertTrue("Newly constructed list should be empty.", list.isEmpty());
@@ -32,10 +32,10 @@ public class DequeTest {
 		assertEquals(2, list.size());
 		list.addFirst("foo");
 		assertEquals(3, list.size());
-    assertEquals("First element should .equals \"hello\".", "hello", list.removeFirst());
+		assertEquals("First element should .equals \"foo\".", "foo", list.removeFirst());
 		assertEquals("First element should .equals \"world\".", "world", list.removeFirst());
 	}
-	
+
 	@Test (timeout = 500)
 	public void testaddLastIsEmptySizeAndRemoveLast() {
 		assertTrue("Newly constructed list should be empty.", list.isEmpty());
@@ -48,11 +48,11 @@ public class DequeTest {
 		list.addLast("foo");
 		assertEquals(3, list.size());
 		assertEquals("Last element should .equals \"foo\".", "foo", list.removeLast());
-    assertEquals("Last element should .equals \"world\".", "world", list.removeLast());
+		assertEquals("Last element should .equals \"world\".", "world", list.removeLast());
 
 	}
-	
-	
+
+
 	@Test (timeout = 500)
 	public void testaddFirstRemoveFirstSizeAndIsEmpty() {
 		assertTrue("Newly constructed list should be empty.", list.isEmpty());
@@ -68,7 +68,7 @@ public class DequeTest {
 		assertEquals("List should now have 0 elements", 0, list.size());
 		assertTrue("All elements removed, list should be empty.", list.isEmpty());
 	}
-	
+
 	@Test (timeout = 500)
 	public void testaddLastRemoveLastSizeAndIsEmpty() {
 		assertTrue("Newly constructed list should be empty.", list.isEmpty());
@@ -84,15 +84,15 @@ public class DequeTest {
 		assertEquals("List should now have 0 elements", 0, list.size());
 		assertTrue("All elements removed, list should be empty.", list.isEmpty());
 	}
-	
+
 	@Test (timeout = 500, expected = NoSuchElementException.class)
 	public void testExceptionOnEmptyRemoveFirst() {
 		list.removeFirst();
 	}
-	
+
 	@Test (timeout = 500, expected = NoSuchElementException.class)
 	public void testExceptionOnEmptyRemoveLast() {
 		list.removeLast();
 	}
-	
+
 }
