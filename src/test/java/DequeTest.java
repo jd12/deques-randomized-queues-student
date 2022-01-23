@@ -14,11 +14,6 @@ public class DequeTest {
 	@Before
 	public void setup(){
 		list = new Deque<String>();
-		Deque<String> l2 = new Deque<String>();
-		if(list == null)
-			fail("You didn't set your list in the Configuration file.");
-		if(list == l2)
-			fail("You should return a new instance of list with each call to Configuration.getDeque()");
 	}
 
 	@Test (timeout = 500)
